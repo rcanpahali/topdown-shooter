@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dviqhn6ninnlh"]
+[gd_scene load_steps=5 format=3 uid="uid://dviqhn6ninnlh"]
 
 [ext_resource type="Texture2D" uid="uid://3qjw0jtujjli" path="res://eye.png" id="1_md64j"]
 [ext_resource type="Script" path="res://Enemy.gd" id="1_mpt4c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_02xxk"]
 radius = 43.0116
+
+[sub_resource type="LabelSettings" id="LabelSettings_akl6g"]
+font_size = 22
 
 [node name="Enemy" type="CharacterBody2D" groups=["EnemyGroup"]]
 script = ExtResource("1_mpt4c")
@@ -16,3 +19,12 @@ texture = ExtResource("1_md64j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_02xxk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -26.0
+offset_top = -74.0
+offset_right = 26.0
+offset_bottom = -43.0
+text = "100"
+label_settings = SubResource("LabelSettings_akl6g")
+horizontal_alignment = 1
