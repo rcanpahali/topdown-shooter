@@ -18,7 +18,8 @@ func _physics_process(_delta: float) -> void:
 func apply_damage(damage: float) -> void:
 	health = clamp(health - damage, 0.0, 100.0)
 	handle_health_text_change()
-	if (health == 0.0):
+	if health == 0.0:
+		GameManager.handle_enemy_death()
 		queue_free()
 	
 func handle_health_text_change() -> void:

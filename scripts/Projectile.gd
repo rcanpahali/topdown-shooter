@@ -29,7 +29,6 @@ func on_body_entered(body: Node2D) -> void:
 	if body is Enemy:
 		var enemy = body as Enemy # Add type safety to get proper function definition
 		enemy.apply_damage(damagePoint)
-		print(enemy.health)		
 	queue_free() # When this is called, the node is removed from the scene
 
 func remove_node() -> void:
